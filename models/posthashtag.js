@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      PostHashtag.belongsTo(models.Post)
+      PostHashtag.belongsTo(models.Hashtag)
     }
   }
   PostHashtag.init({

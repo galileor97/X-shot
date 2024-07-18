@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Hashtag.belongsToMany(models.Post, { 
+        through: 'PostHashtag',  // This is the name of the junction table
+        foreignKey: 'hashtagId',
+        otherKey: 'postId'
+      });
     }
   }
   Hashtag.init({
