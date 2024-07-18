@@ -1,4 +1,4 @@
-const {User} = require('../models/user')
+const { User } = require('../models/user')
 class UserController{
 
 static async signIn(req,res){
@@ -23,7 +23,6 @@ static async postSignUp(req,res){
         await User.create({ username, email, password });
         res.redirect('/')
     } catch (error) {
-
         res.send(error.message)
     }
 }
