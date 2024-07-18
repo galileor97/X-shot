@@ -1,5 +1,5 @@
 const {User, Profile, Post, Hashtag, PostHashtag} = require('../models/index')
-
+const UserController = require('./UserController')
 class Controller {
 
     static async homePage(req,res) {
